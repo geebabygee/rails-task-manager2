@@ -1,0 +1,12 @@
+<div class="container">
+  <h1><%= @task.title %></h1>
+  <p class="well"><%= @task.details %></p>
+  <p><input type="checkbox" name="completed" value="check" <%=  @task.completed ? "checked" : "" %>></p>
+  <%= link_to edit_task_path(@task.id), class: 'btn btn-default' do %>
+    <i class="fa fa-pencil"></i> Edit this task
+  <% end %>
+  <hr>
+  <%= link_to tasks_path do %>
+    <i class="fa fa-history"></i> Back to list
+  <% end %>
+</div>
